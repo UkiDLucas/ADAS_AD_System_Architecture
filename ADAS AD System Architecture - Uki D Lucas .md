@@ -2,7 +2,7 @@
 
 
 
-Last edited on August 20, 2021
+Last edited on August 21, 2021
 
 by Uki D. Lucas
 
@@ -61,9 +61,11 @@ As you can see the field is very large and constantly growing, this field is a t
 
 
 
-The traditional approach is to provide a **low-cost electronic control unit (ECU) per each feature**, but the tendency in the market is to combine many of these into more powerful Domain Controller that host multiple features are **designed based on the safety level desired**.
+The traditional approach of auto manufacturers, or as they are called in the industry, original equipment manufacturers (OEM), is to provide a **low-cost electronic control unit (ECU) per each feature**. This is to done to insulate model year-to-year upgrades, offer multiple vehicle price-level offerings and use different suppliers.
 
-In this book I will explore a **Domain Controller that meets safety levels up to L2 of autonomy** and then explore design of **L3+ based on the Tesla design** as that is the only one that is publicly available at this time.
+ The recent tendency in the market is to combine many of these into more powerful Domain Controller that host multiple features which are **designed based on the safety level desired**. The manufacturers start realizing that **users expect frequent software upgrades over-the-air (OTA)**, it is easier to find place for a single domain controller than 10 different ECUs. It is also easier to design the cooling which is a big factor in automotive.
+
+In this book I will explore a **Domain Controller that meets safety levels up to L2 of autonomy** and then analyze the design of **L3+ based on the Tesla design** as that is the only one that is publicly available at this time.
 
 
 
