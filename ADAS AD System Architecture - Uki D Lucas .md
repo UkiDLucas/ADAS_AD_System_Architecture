@@ -101,9 +101,33 @@ As you can see the field is very large and constantly growing, this field is a t
 
 The traditional approach of auto manufacturers, or as they are called in the industry, original equipment manufacturers (OEM), is to provide a **low-cost electronic control unit (ECU) per each feature**. This is to done to insulate model year-to-year upgrades, offer multiple vehicle price-level offerings and use different suppliers.
 
- The recent tendency in the market is to combine many of these into more powerful Domain Controller that host multiple features which are **designed based on the safety level desired**. The manufacturers start realizing that **users expect frequent software upgrades over-the-air (OTA)**, it is easier to find place for a single domain controller than 10 different ECUs. It is also easier to design the cooling which is a big factor in automotive.
+ The recent tendency in the market is to combine many of these into more powerful Domain Controller that host multiple features which are **designed based on the safety level desired**. The manufacturers start realizing that **users expect frequent software upgrades over-the-air (OTA)**, which is easier with a single unit.  It is easier to find place for a single domain controller than 10 different ECUs. It is cheaper to manufacture a single unit. A single unit draws less current. It is also easier to design the cooling which is a big factor in automotive.
 
 In this book I will explore a **Domain Controller that meets safety levels up to L2 of autonomy** and then analyze the design of **L3+ based on the Tesla design** as that is the only one that is publicly available at this time.
+
+
+
+## Tools of the System Architect
+
+In this book, I will use Omnigraffle software to draw diagrams on my Mac, but in the industry the **Enterprise Architect** is commonly used. The book is written in a simple markdown (MD) format using Typora editor. In the industry, much of the documentation is done in Confluence (type of wiki) and in one of the requirements management systems such as Polarion or ALM (doors). 
+
+I will not lie, the industry tools are terrible from the user experience (UX) perspective and they feel like they were designed in 1990s. There is a big opportunity for modern software companies to provide integrated environment for **versioning and traceability between requirements, design documents, epics, features and tasks and code commits**.
+
+
+
+## Traceability throughout the development lifecycle 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
