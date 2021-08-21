@@ -5,6 +5,7 @@
 Last edited on August 21, 2021
 
 by Uki D. Lucas
+https://www.linkedin.com/in/ukidlucas/
 
 
 
@@ -15,6 +16,43 @@ Computer Science engineers who switch to the field of **Advanced Driver Assistan
 Many startups prototype their ideas on Linux general-purpose computers (laptops, Nvidia Xavier) to realize months or years later that their **prototype has no chance of running in a low-cost, hardware-accelerated, functional safety-oriented, embedded system**. The right design from the ground up is the key.
 
 This text attempts to be a practical guide while referencing **publicly available information** in the reference section at the end.
+
+
+
+## Contact the Author
+
+If you are reading this book, I would love if you **connected with me to collaborate on the future updates**:
+https://www.linkedin.com/in/ukidlucas/
+
+
+
+## Contributions by the readers
+
+The architects are a very opinionated bunch, every company has different approach to the design, so I expect a metric ton of criticism. 
+
+Please consider the following: if you provide me a correction in a constructive format such as "You have written that X is Y, but based on [URL included] the X is really Z" than I will include the correction and refer to you in the reference by name as the source of new information. Mean people and trolls will be ignored.
+
+
+
+## Value provided
+
+In order to write this book I had to spend many weekends and burn much of the midnight oil. 
+
+The field of automated driving is changing constantly and updating the book takes effort and motivation. 
+
+The author assumes there will be very limited group of people who are interested in reading this book, so every copy sold will make the motivational difference in order to continue the effort.
+
+This book is sold with license for a single person who paid for it. Sharing any part of the content is a violation of a copyright and an ethical trespass. 
+
+If you would like to buy this book to share it with your team as PDF or ebook, please contact the author for a deep group discount.  
+
+If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. This book costs a fraction of what a System Architect makes in one hour, please consider it.
+
+I hope you will find this book a good reference. If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get an updated version.
+
+
+
+
 
 
 
@@ -69,29 +107,7 @@ In this book I will explore a **Domain Controller that meets safety levels up to
 
 
 
-## Value provided
 
-In order to write this book I had to spend many weekends and burn much of the midnight oil. 
-
-The field of automated driving is changing constantly and updating the book takes effort and motivation. 
-
-The author assumes there will be very limited group of people who are interested in reading this book, so every copy sold will make the motivational difference in order to continue the effort.
-
-This book is sold with license for a single person who paid for it. Sharing any part of the content is a violation of a copyright and an ethical trespass. 
-
-If you would like to buy this book to share it with your team as PDF or ebook, please contact the author for a deep group discount.  
-
-If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. This book costs a fraction of what a System Architect makes in one hour, please consider it.
-
-I hope you will use this book as a reference. If you previously purchased the book on Kindle, occasionally delete it from your device and download it again to get an updated version.
-
-
-
-## Contributions by the readers
-
-The architects are very opinionated bunch, every company has different approach to the design, so I expect a metric ton of criticism. 
-
-Please consider the following, if you provide me a correction in a constructive format such as "You have written that X is Y, but based on [URL included] the X is really Z" than I will include the correction and refer you in the reference by name as the source of new information. Mean people and trolls will be ignored.
 
 
 
