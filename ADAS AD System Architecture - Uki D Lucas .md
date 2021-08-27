@@ -50,7 +50,13 @@ This book costs a fraction of what a System Architect makes in one hour.
 
 If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. 
 
-I hope you will find this book a good reference. If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get the newest version.
+
+
+# Updates
+
+I hope you will find this book a good reference. 
+
+If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get the newest version. The date at the beginning should be an indicator.
 
 
 
@@ -82,13 +88,13 @@ Here are some of the examples of features listed from most common to futuristic:
 - Curb Detection (perception component)
 - Street-sign detection (perception component)
 - Free-Space Detection (perception component)
-- automated cruise control (ACC)
-- driver monitoring system (DMS)
-- occupant monitoring system (OMS)
-- automated park assist (APA)
-- automated valet parking (AVP)
-- valet parking - remote summon 
-- L2 automated highway driving, driver supervision required
+- Automated Cruise Control (ACC)
+- Driver Monitoring System (DMS)
+- Occupant Monitoring System (OMS)
+- Automated Park Assist (APA)
+- Automated Valet Parking (AVP)
+- Valet parking - remote summon 
+- L2 automated highway driving, driver hands on the steering wheel
 - L3 any road autonomy, driver supervision required
 - L4 any road autonomy, driver controls provided, driver supervision not required
 - L5 full autonomy, no driver controls provided
