@@ -68,6 +68,24 @@ If you previously purchased the book on Kindle, I suggest to occasionally delete
 
 The System Architect's job is to ensure that the parts of the system, including hardware, peripherals, software, Human-Machine Interfaces (HMI), remote services, as well manufacturing, **delivers a product that functions well as a whole**. The System Architect may not know the details of implementation of a particular component, but should investigate if that component would function well in the final product. The System Architect usually analyses data flows, creates high-level interaction diagrams and system requirements specifications (SRS) from which the user experience (UX) experts, mechanical, electronic and software architects can design their particular domains.
 
+The system architect (often called chief engineer) assures the requirements meet given the **business needs** and a set of **use cases** which represent the desired **user experience (UX)**.
+
+In automotive language, if you build a car, the system specifications will specify:
+
+- the power of the motors used,
+- the number of the motors depending of the vehicle type and performance characteristics (AWD, etc.),
+- the peak consumption of the power by the motors, 
+- the overall power consumption of the motors,
+- the expected gearing ratio,
+- the heat dissipation management needs for the rotors,
+- the battery size and discharge characteristics,
+- the power consumption of other electronic components
+- and so on
+
+Of course, this is a highly simplified example. 
+
+Please note, that the system architect may not know the internal design of the motor or a battery pack, but the system architecture has to assure the right combination of motors, batteries and gearing ratios to provide a well functioning drivetrain as a whole.
+
 
 
 ## Feature-level components of ADAS/AD
@@ -162,6 +180,8 @@ The requirements should be written in a clear and easy to understand language, t
 Each requirement has to be treated as an atomic unit without assumptions of prior knowledge. The reason for this is that a developer may not have knowledge of the assumptions that architect made months ago, and which have since changed.
 
 Each requirement should have a unique reference in the project management system (e.g. JIRA) and should be tracked accordingly.
+
+Again, the system architect assures that the system works as a whole. The internals of the components maybe be designed later, but the system requirements should assure that they interface with the system properly.
 
 
 
