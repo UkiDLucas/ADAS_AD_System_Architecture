@@ -143,11 +143,33 @@ There is a big opportunity for modern software companies to provide integrated e
 
 
 
+## System Requirements
+
+In the appendix, I will provide a sample of the requirements mentioned in this text.
+
+Below, are few of the guidelines that I recommend based on decades of experience working as an architect.
+
+The complete set of requirements should read like a (technical) book. 
+
+You should be able to export the requirements to a PDF and read them cover to cover to gain the understanding of the system.
+
+The requirements should be easily searchable.
+
+The requirements should not be split into independent modules. I know that a large project can have ten of thousands of requirements, but still, they should be managed as a whole, cover-to-cover. I have seen too many examples of contradictory sets of requirements coming from a single organization where teams are not talking to each other.
+
+The requirements should be written in a clear and easy to understand language, they should leave very little in a way of interpretation. Vague and confusing language indicates lack of understanding of the subject, or lack of care from the architect, in both cases it is a recipe for disaster.
+
+Each requirement has to be treated as an atomic unit without assumptions of prior knowledge. The reason for this is that a developer may not have knowledge of the assumptions that architect made months ago, and which have since changed.
+
+Each requirement should have a unique reference in the project management system (e.g. JIRA) and should be tracked accordingly.
+
+
+
 ## Traceability throughout the development lifecycle 
 
 
 
-
+Insert a diagram here.
 
 
 
