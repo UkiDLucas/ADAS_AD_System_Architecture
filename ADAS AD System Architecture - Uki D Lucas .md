@@ -2,7 +2,7 @@
 
 
 
-Last edited on August 21, 2021
+Last edited on August 27, 2021
 
 by Uki D. Lucas
 https://www.linkedin.com/in/ukidlucas/
@@ -11,13 +11,19 @@ https://www.linkedin.com/in/ukidlucas/
 
 ## Motivation
 
-Computer Science engineers who switch to the field of **Advanced Driver Assistance Systems (ADAS)** and **Automated Driving (AD)** usually have a rich set of skills, but generally lack the specific to this field **System Architecture** perspective. This situation may change in the next few years as companies like Tesla publicize their designs (see reference #1), but today such designs remain somewhat esoteric. 
+Many startups prototype their ideas on Linux general-purpose computers (laptops, Nvidia Xavier) to realize, months or years later, that their **prototype has no chance of running in a low-cost, hardware-accelerated, safety-oriented, embedded system** without a major code decoupling and a general re-write. The right design from the ground up is the key.
 
-Many startups prototype their ideas on Linux general-purpose computers (laptops, Nvidia Xavier) to realize months or years later that their **prototype has no chance of running in a low-cost, hardware-accelerated, functional safety-oriented, embedded system**. The right design from the ground up is the key.
+Engineers who switch to the field of **Advanced Driver Assistance Systems (ADAS)** and **Automated Driving (AD)** usually have a rich set of skills, but generally lack the specific to this field **System Architecture** perspective. 
+
+This situation may change in the next few years as companies like Tesla keep publicizing their designs (see reference #1), but today such designs remain somewhat esoteric. 
 
 This text attempts to be a practical guide while referencing **publicly available information** in the reference section at the end.
 
+## Contributions by the readers
 
+The architects are a very opinionated bunch, every company has different approach to the design, so I expect a metric ton of criticism. 
+
+Please consider the following: if you provide me a correction in a constructive format such as "You have written that X is Y, but based on [URL included] the X is really Z" than I will include the correction and refer to you in the reference by name as the source of new information. Mean people will be ignored.
 
 ## Contact the Author
 
@@ -26,29 +32,25 @@ https://www.linkedin.com/in/ukidlucas/
 
 
 
-## Contributions by the readers
-
-The architects are a very opinionated bunch, every company has different approach to the design, so I expect a metric ton of criticism. 
-
-Please consider the following: if you provide me a correction in a constructive format such as "You have written that X is Y, but based on [URL included] the X is really Z" than I will include the correction and refer to you in the reference by name as the source of new information. Mean people and trolls will be ignored.
-
-
-
 ## Value provided
 
-In order to write this book I had to spend many weekends and burn much of the midnight oil. 
+In order to write this book I had to sacrifice many weekends and burn some midnight oil. 
 
 The field of automated driving is changing constantly and updating the book takes effort and motivation. 
+
+In fact, more papers are published daily on the subject of perception than any single human could read.
 
 The author assumes there will be very limited group of people who are interested in reading this book, so every copy sold will make the motivational difference in order to continue the effort.
 
 This book is sold with license for a single person who paid for it. Sharing any part of the content is a violation of a copyright and an ethical trespass. 
 
-If you would like to buy this book to share it with your team as PDF or ebook, please contact the author for a deep group discount.  
+If you would like to buy this book to share it with your team as PDF or ebook, please contact the author for a deep group discounts.  
 
-If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. This book costs a fraction of what a System Architect makes in one hour, please consider it.
+This book costs a fraction of what a System Architect makes in one hour.
 
-I hope you will find this book a good reference. If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get an updated version.
+If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. 
+
+I hope you will find this book a good reference. If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get the newest version.
 
 
 
@@ -58,7 +60,7 @@ I hope you will find this book a good reference. If you previously purchased the
 
 ## What is function of a System Architect?
 
-The System Architect's job is to ensure that the whole system, including hardware, peripherals, software, Human-Machine Interfaces (HMI), remote services, as well manufacturing, **delivers a product that functions well when combined together**. The System Architect may not know the details of implementation of a particular component, but should investigate if that component would function well in the final product. The System Architect usually provides data flow, module-interaction-level diagrams and system requirements specifications (SRS) from which the user experience (UX) experts, mechanical, electronic and software architects can design their particular domains.
+The System Architect's job is to ensure that the parts of the system, including hardware, peripherals, software, Human-Machine Interfaces (HMI), remote services, as well manufacturing, **delivers a product that functions well as a whole**. The System Architect may not know the details of implementation of a particular component, but should investigate if that component would function well in the final product. The System Architect usually analyses data flows, creates high-level interaction diagrams and system requirements specifications (SRS) from which the user experience (UX) experts, mechanical, electronic and software architects can design their particular domains.
 
 
 
@@ -66,20 +68,20 @@ The System Architect's job is to ensure that the whole system, including hardwar
 
 There are many subsystems that comprise of ADAS/AD domain. 
 
-Here are some of the examples of features from most common to futuristic:
+Here are some of the examples of features listed from most common to futuristic:
 
-- surround view (SV)
-- Augmented Reality with a center-stack display or heads-up display (HUD) 
-- rear eMirror, Camera Monitoring System (CMS)
-- side eMirrors, Camera Monitoring System (CMS)
-- lane keep assist (LKA)
-- pedestrian and large animal detection (component)
-- obstacle detection (component)
-- emergency breaking system (EBS)
-- cross-traffic alert (CTA)
-- curb detection (component)
-- street-sign detection (component)
-- free-space detection (component)
+- Surround View (SV)
+- Augmented Reality with a console display or windshield-projected heads-up display (HUD) 
+- Rear eMirror, Camera Monitoring System (CMS)
+- Side eMirrors, Camera Monitoring System (CMS)
+- Lane Keep Assist (LKA)
+- Pedestrian and large animal detection (perception component)
+- Obstacle detection (perception component)
+- Emergency Breaking System (EBS)
+- Cross-Traffic Alert (CTA)
+- Curb Detection (perception component)
+- Street-sign detection (perception component)
+- Free-Space Detection (perception component)
 - automated cruise control (ACC)
 - driver monitoring system (DMS)
 - occupant monitoring system (OMS)
