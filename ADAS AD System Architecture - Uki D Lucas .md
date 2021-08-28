@@ -197,7 +197,29 @@ Insert a diagram here.
 
 
 
+## Functional Safety (FuSA)
 
+
+
+You could write entire book about Functional Safety, but this is not a place for it here. 
+
+However, before starting on the job of architecting the system you have to embrace the concepts.
+
+The ADAS / AD system can have multiple levels of safety, even within that systems there often are "islands" of certified safe and not safe operations.
+
+I suggest to **think about safety in reverse order** of the normal flow of information.
+
+When humans are driving vehicles, they are responsible for their own safety, for their passengers and others around, not to mention for the property damage. You can give the skipper a rudder and send them off on their way. Once you put the horse in front of that vehicle, the horse takes the commands from the driver and does pulling, turning and stopping. Unruly horses that do not learn how to do it safely do not have long careers and are quickly dispatched to the greener pastures.
+
+Similarly, when you design an ADAS / AD system you take the responsibility for safety.
+
+At first, you have to think which components of your system **control the vehicle**, or could **make the driver make a wrong decision** that could cause harm. 
+
+Even systems that do not control the vehicle such as electronic mirrors, or surround view can cause harm. Once I was in a prototype vehicle that had a perfect camera system except it had a couple seconds of latency. It is enough to say I realized that once I drove off the curb which, on the screen, was a couple of feet further. No harm was done. 
+
+Another safety concern could be and augmented reality (AR) system that projects on the driver's windshield. Let's imagine that the AR system runs on the in-vehicle infotainment (IVI) operating system that has the unrelated feature which displays something (fireworks/disco ball) on the rare occasions (user's birthday) and it slipped the attention of the quality assurance (QA). It is a far-fetched example, but brings up an important concept. 
+
+If you are **controlling the vehicle, or potentially distracting the driver** who is controlling the vehicle your system has to be evaluated from the safety perspective.
 
 
 
