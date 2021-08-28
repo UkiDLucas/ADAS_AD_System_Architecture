@@ -2,7 +2,7 @@
 
 
 
-Last edited on August 27, 2021
+Last edited on August 28, 2021
 
 by Uki D. Lucas
 https://www.linkedin.com/in/ukidlucas/
@@ -143,21 +143,23 @@ In this book I will explore a **Domain Controller that meets safety levels up to
 
 
 
-## Tools of the System Architect
+## Software Tools
 
-In this book, I will use Omnigraffle software to draw the diagrams. The book is written in a simple markdown (MD) format using Typora editor. I also use GitHub extensively to store my projects.
+The book is written using a simple markdown (MD) format using Typora editor. I will use Omnigraffle software to draw the diagrams. I also extensively use GitHub to store my projects.
 
-In smaller organizations, for keeping track of **linkage between documentation, requirements and tasks** (project management), the combination of **Atlassian JIRA and Confluence**  are quite sufficient and can be easily obtained for total of $120 per month for organizations up to 20,000 people. (see reference #8)
+In smaller organizations, it is quite sufficient to use the combination of **Atlassian JIRA and Confluence** to keep track of **linkage between documentation, requirements and tasks** (project management). Atlassian tools can be easily obtained for as little as $120 per month for organizations up to 20,000 people. (see reference #8)
 
-Atlassian tools are well proven in the industry and generally do not require any introduction. With a bit of planning and learning, you can show the **required traceability, and baseline** documentation for future **ASIL audits**.
+Atlassian tools are universally used in the industry and generally do not require any introduction. With a bit of planning and learning, you can show the **required traceability, and baseline** documentation for future **ASIL audits**. (see reference #9)
 
-The big organization, on the other hand, love to make people's life a nightmare. They also tend to create a lot of useless jobs that sip the living spirit of everyone's around and increase the overhead costs.
+The big organization, on the other hand, love to make things more difficult. They also tend to create a lot of clerical jobs that increase the overhead costs. These people tend to create more bureaucracy which feeds the run-away circle of cost increase.
 
-In the industry, the **Enterprise Architect** is commonly used. I know all software is gradually improving, but as of the time of writing the user experience is terrible (circa late 1990s), integration with requirements is awful and uni-directional and licenses so expensive that most of the developers never get access to it, or they get "floating license" which is equivalent of a crew of workers digging a ditch with one shovel.  
+In the industry, the **Enterprise Architect** (EA) software is commonly used. I know all software is gradually improving, but as of the time of writing, the user EA experience is terrible, reminiscent of circa late 1990s Windows apps. It is based on SVN which continues the theme of technical melancholy. 
 
-Much of the documentation and requirements management is done in Polarion (better) or in IBM ALM (aka doors), I had displeasure of working daily over 4 and a half years with the last one. 
+EA integration with requirements and documentation is awkward and uni-directional which in my opinion is unacceptable. The licensing is expensive enough that most of the developers never get access to it, or they get a "floating license" which is equivalent of a crew of workers digging a ditch with one shovel. I know there is a newer version of web-based UI of EA, but my employers did not support it, so I do not have an opinion on the improvements.
 
-There is a big opportunity for modern software companies to provide integrated environment for **versioning and traceability between requirements, design documents, epics, features and tasks and code commits**.
+Much of the documentation and requirements management is done either in Polarion, which is a better one, or in IBM ALM (aka DNG). With DNG I had the displeasure of working daily for over 4 and a half years. 
+
+There is a big opportunity for modern software companies to provide integrated environment for **versioning and traceability between requirements, design documentation, task management and code commits**.
 
 
 
@@ -190,6 +192,16 @@ Again, the system architect assures that the system works as a whole. The intern
 
 
 Insert a diagram here.
+
+
+
+
+
+
+
+
+
+
 
 
 
