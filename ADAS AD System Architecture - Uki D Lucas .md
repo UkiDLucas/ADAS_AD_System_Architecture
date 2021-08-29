@@ -232,7 +232,9 @@ These are just a few examples, and once you start analyzing your own system, you
 
 Next, you have to take a look inside the ADAS / AD system. 
 
+The logic algorithms that generate **vehicle control signals are usually developed from the ground up in the safe environment**. It is common to see the **"safety island"** running on the dedicated set of the chips that are **isolated from other systems** such as in-vehicle infotainment (IVI). It would be a really bad design if ADAS / AD vehicle control was affected by user turning on media application which causes the chips' utilization spike, voltage supply drop, or communication bandwidth issue.
 
+The "safety island" usually has a separate power management, as safety-certified operating system (OS) such as AUTOSAR (classic) and control software developed in tools such as Simulink.
 
 
 
