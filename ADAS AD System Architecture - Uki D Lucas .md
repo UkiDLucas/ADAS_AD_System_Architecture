@@ -211,15 +211,26 @@ When humans are driving vehicles, they are responsible for their own safety, for
 
 Similarly, when you design an ADAS / AD system you take the responsibility for safety.
 
-I suggest to **think about safety in reverse order** of the normal flow of information.
-
-At first, you have to think which components of your system **control the vehicle**, or could **make the driver make a wrong decision** that could cause harm. 
+You have to think which components of your system **control the vehicle**, or could **make the driver make a wrong decision** that could cause harm. 
 
 Even systems that do not control the vehicle such as electronic mirrors, or surround view can cause harm. Once, I was driving a prototype vehicle that had a perfect camera system except it had a couple seconds of latency. It is enough to say, I realized it, once I drove off the curb which, on the screen, was a couple of feet further. No harm was done. 
 
 Another example could be an augmented reality (AR) system that projects on the driver's windshield. Typically, AR does not require safety rating. Let's imagine the AR system runs on the in-vehicle infotainment (IVI) operating system that has the unrelated feature which displays something (e.g. fireworks or disco ball) on the rare occasions (e.g. user's birthday) and it slipped the attention of the quality assurance (QA). It is a far-fetched example, but it drives the need for safety mindset. 
 
 If you are **controlling the vehicle, or potentially distracting the driver** your system has to be evaluated from the safety perspective.
+
+I suggest to **think about safety in reverse order** of the normal flow of information.
+
+At first, think of ADAS / AD module interacting with the vehicle, usually this happens over the CAN bus:
+
+- What happens if the signals are interrupted? You should consider "heart-beat" signals.
+- What happens if the signals are stuck in the loop? You should consider a time-stamp in the "heart-beat".
+- What happens if module stops sending signals? The vehicle should gracefully transition from the autonomy to a "safe" state. That is quite a challenge in the system where driver is not controlling the vehicle (valet parking, or L5 autonomy).
+- How to prevent messages that are erroneous? This could be caused by software problems or cyber-security breach. You should consider the message signature and allowed value ranges.
+
+These are just a few examples, and once you start analyzing your own system, you will be able to come up with a couple hundreds of your own requirements.
+
+Next, you have to take a look inside the ADAS / AD system. 
 
 
 
