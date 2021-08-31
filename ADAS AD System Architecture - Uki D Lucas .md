@@ -1,8 +1,8 @@
-# ADAS and Autonomous Driving System Architecture
+# System Architecture: ADAS / AD 
 
 
 
-Last edited on August 28, 2021
+Last edited on August 31, 2021
 
 by Uki D. Lucas
 https://www.linkedin.com/in/ukidlucas/
@@ -11,56 +11,15 @@ https://www.linkedin.com/in/ukidlucas/
 
 ## Motivation
 
-Many startups prototype their ideas on Linux general-purpose computers (laptops, Nvidia Xavier) to realize, months or years later, that their **prototype has no chance of running in a low-cost, hardware-accelerated, safety-oriented, embedded system** without a major code decoupling and a general re-write. The right design from the ground up is the key.
+Many startups prototype their ideas on Linux general-purpose computers (laptops, Nvidia Xavier, etc.) to realize, months or years later, that their **prototype has no chance of running in a low-cost, hardware-accelerated, safety-oriented, embedded system** without a major code decoupling and a general re-write. 
 
-Engineers who switch to the field of **Advanced Driver Assistance Systems (ADAS)** and **Automated Driving (AD)** usually have a rich set of skills, but generally lack the specific to this field **System Architecture** perspective. 
+The right design from the ground up is the key.
 
-This situation may change in the next few years as companies like Tesla keep publicizing their designs (see reference #1), but today such designs remain somewhat esoteric. 
+Engineers who switch to the field of **Advanced Driver Assistance Systems (ADAS)** and **Automated Driving (AD)** usually have computer perception skills, but generally lack the domain-specific System Architecture experience. 
+
+This situation may change in the next few years as companies like Tesla keep publicizing their designs (see reference #1), but today such designs remain esoteric. 
 
 This text attempts to be a practical guide while referencing **publicly available information** in the reference section at the end.
-
-## Contributions by the readers
-
-The architects are a very opinionated bunch, every company has different approach to the design, so I expect a metric ton of criticism. 
-
-Please consider the following: if you provide me a correction in a constructive format such as "You have written that X is Y, but based on [URL included] the X is really Z" than I will include the correction and refer to you in the reference by name as the source of new information. Mean people will be ignored.
-
-## Contact the Author
-
-If you are reading this book, I would love if you **connected with me to collaborate on the future updates**:
-https://www.linkedin.com/in/ukidlucas/
-
-
-
-## Value provided
-
-In order to write this book I had to sacrifice many weekends and burn some midnight oil. 
-
-The field of automated driving is changing constantly and updating the book takes effort and motivation. 
-
-In fact, more papers are published daily on the subject of perception than any single human could read.
-
-The author assumes there will be very limited group of people who are interested in reading this book, so every copy sold will make the motivational difference in order to continue the effort.
-
-This book is sold with license for a single person who paid for it. Sharing any part of the content is a violation of a copyright and an ethical trespass. 
-
-If you would like to buy this book to share it with your team as PDF or ebook, please contact the author for a deep group discounts.  
-
-This book costs a fraction of what a System Architect makes in one hour.
-
-If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. 
-
-
-
-# Updates
-
-I hope you will find this book a good reference. 
-
-If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get the newest version. The date at the beginning should be an indicator.
-
-
-
-
 
 
 
@@ -85,6 +44,71 @@ In automotive language, if you build a car, the system specifications will speci
 Of course, this is a highly simplified example. 
 
 Please note, that the system architect may not know the internal design of the motor or a battery pack, but the system architecture has to assure the right combination of motors, batteries and gearing ratios to provide a well functioning drivetrain as a whole.
+
+
+
+## Design Assumptions
+
+
+
+The traditional approach of auto manufacturers, or as they are called in the industry, original equipment manufacturers (OEM), is to provide a **low-cost electronic control unit (ECU) per each feature**. This is to done to enable and insulate model year-to-year upgrades, offer multiple vehicle price-level offerings and use different suppliers.
+
+The recent tendency in the market is to combine many of these into more powerful Domain Controller that host multiple features which are **designed based on the safety level desired**. 
+
+The manufacturers start realizing that **users expect frequent over-the-air (OTA) software upgrades **, which is easier with a single unit. 
+
+It is easier to find place for a single domain controller than 10 different ECUs. 
+
+It is cheaper to manufacture a single unit. 
+
+A single unit draws less current. 
+
+It is also easier to design the cooling which is a big factor in automotive.
+
+In this book I will explore a **Domain Controller that meets safety levels up to L2 of autonomy** and then analyze the design of **L3+ based on the Tesla design** as that is the only one that is publicly available at this time.
+
+
+
+## Contributions by the readers
+
+The architects are a very opinionated bunch, every company has different approach to the design, hence I do not expect to hit it off immediately. 
+
+Please consider the following: if you provide me a correction in a constructive format such as "You have written that X is Y, but the X is really Z, based on [URL included]" than I will include the correction and refer to you in the reference by name as the source of new information.
+
+## Contact the Author
+
+If you are reading this book, I would love if you **connected with me to collaborate on the updates**:
+https://www.linkedin.com/in/ukidlucas/
+
+
+
+## Value provided
+
+In order to write this book I had to sacrifice many weekends and burn much midnight oil. 
+
+The field of automated driving is changing constantly and updating the book takes effort and motivation. 
+
+In fact, more papers are published daily on the subject of perception than any single human could read.
+
+The author assumes there will be very limited group of people who are interested in reading this book, so every copy sold will make the motivational difference in order to continue the effort.
+
+This book is sold with license for a single person who paid for it. Sharing any part of the content is a violation of a copyright and an ethical trespass. 
+
+If you would like to buy this book to share it with your team as PDF or ebook, please contact the author for a deep group discounts.  
+
+This book costs a fraction of what a System Architect makes in one hour.
+
+If you have obtained a free copy of this book please consider purchasing  a copy from Amazon Kindle to show your support for author's efforts. 
+
+
+
+
+
+## Updates
+
+I hope you will find this book a good reference. 
+
+If you previously purchased the book on Kindle, I suggest to occasionally delete it from your device and download it again to get the newest version. The date at the beginning should be an indicator.
 
 
 
@@ -121,25 +145,7 @@ As you can see the field is very large and constantly growing, this field is a t
 
 
 
-## Design Assumptions
 
-
-
-The traditional approach of auto manufacturers, or as they are called in the industry, original equipment manufacturers (OEM), is to provide a **low-cost electronic control unit (ECU) per each feature**. This is to done to enable and insulate model year-to-year upgrades, offer multiple vehicle price-level offerings and use different suppliers.
-
-The recent tendency in the market is to combine many of these into more powerful Domain Controller that host multiple features which are **designed based on the safety level desired**. 
-
-The manufacturers start realizing that **users expect frequent over-the-air (OTA) software upgrades **, which is easier with a single unit. 
-
-It is easier to find place for a single domain controller than 10 different ECUs. 
-
-It is cheaper to manufacture a single unit. 
-
-A single unit draws less current. 
-
-It is also easier to design the cooling which is a big factor in automotive.
-
-In this book I will explore a **Domain Controller that meets safety levels up to L2 of autonomy** and then analyze the design of **L3+ based on the Tesla design** as that is the only one that is publicly available at this time.
 
 
 
@@ -248,6 +254,103 @@ The "safety island" usually has a separate power management, as safety-certified
 
 
 
+## Functional Safety (FuSa) ISO 26262, ASIL A to ASIL D
+
+
+
+## Network Communication Protocols
+
+- ProtoBuffers
+- SOME/IP
+
+Payload Optimization techniques
+
+
+
+## Vehicle to Cloud V2X, IoT
+
+
+
+## C++11
+
+
+
+## Unit Testing
+
+- gTest C++
+- CI integration
+
+
+
+
+
+## Real - Time embedded OS RTOS
+
+
+
+## Device Drivers
+
+- Ethernet
+- Serial
+- I2C
+- SPI
+- flash
+- USB
+
+
+
+## Android
+
+
+
+## Repositories, build system, Continuous Integration (IC)
+
+
+
+## DataSpeed
+
+Remote car starting
+
+Remote car stopping
+
+(see reference #10)
+
+
+
+## AUTOSAR
+
+
+
+Cyber-Security
+
+- communication security
+- channel authentication mechanisms
+- security protocols
+
+
+
+## CAN bus
+
+
+
+
+
+
+
+
+
+## Service Oriented Architecture SOA
+
+
+
+
+
+## System Failure Points
+
+
+
+
+
 
 
 
@@ -280,6 +383,12 @@ There is no point to list any particular part numbers as they change every year,
 - auto exposure
 - auto focus
 - auto white balance
+
+
+
+## Image Stabilization
+
+Affine Transformation
 
 
 
@@ -448,9 +557,13 @@ Commonly it uses 3x3 pixel **Sobel** convolution filter.
 
 # Resources
 
-1. http://software-dl.ti.com/processor-sdk-linux/esd/docs/latest/linux/Foundational_Components_OpenVX.html
+1. Texas Instruments (Ti) OpenVX
 
-2. https://www.khronos.org/openvx/
+   - [software-dl.ti.com](http://software-dl.ti.com/processor-sdk-linux/esd/docs/latest/linux/Foundational_Components_OpenVX.html)
+
+2. Khronos OpenVX
+
+   - [www.khronos.org](https://www.khronos.org/openvx/)
 
 3. https://www.youtube.com/watch?v=uihBwtPIBxM
 
@@ -460,13 +573,22 @@ Commonly it uses 3x3 pixel **Sobel** convolution filter.
 
 6. http://software-dl.ti.com/processor-sdk-linux/esd/docs/latest/linux/Foundational_Components_OpenCV.html
 
-7. https://coral.ai/docs/edgetpu/pipeline/#overview
+7. Coral AI
 
-8. [Atlassian Confluence](https://confluence.atlassian.com/)
+   - [https://coral.ai](https://coral.ai/docs/edgetpu/pipeline/#overview)
 
-9. [Automotive Safety Integrity Level ISO 26262) - Functional Safety for Road Vehicles standard](https://en.wikipedia.org/wiki/Automotive_Safety_Integrity_Level)
+8. Atlassian
 
-10. 
+   - [Atlassian Confluence](https://confluence.atlassian.com/)
+   
+9. ASIL ISO 26262
+
+   - [Automotive Safety Integrity Level ISO 26262) - Functional Safety for Road Vehicles standard](https://en.wikipedia.org/wiki/Automotive_Safety_Integrity_Level)
+
+10. DataSpeed
+
+    - [https://www.dataspeedinc.com/](https://www.dataspeedinc.com/)
+    - [Polaris RZR - YouTube](https://www.youtube.com/watch?v=ZuTUoUcWL7A)
 
     
 
