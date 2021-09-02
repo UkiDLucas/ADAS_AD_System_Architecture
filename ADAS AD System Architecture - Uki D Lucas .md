@@ -211,17 +211,21 @@ You could write entire book about Functional Safety, but this is not a place for
 
 However, before starting on the job of architecting the system you have to embrace the concepts.
 
-The ADAS / AD system can have multiple levels of safety, even within that systems, there are often "islands" of certified to be safe and regular, quality-managed (QM), operations.
+The ADAS / AD system can have multiple levels of safety, even within that systems, there are often "islands" of certified to be safe (ASIL A thru D), and regular, quality-managed (QM), operations.
 
-When humans are driving vehicles, they are responsible for their own safety, for their passengers and others around, not to mention for the property damage. You can give the skipper a rudder and send them off on their way. Once you put the horse in front of that vehicle, the horse takes the commands from the driver and does pulling, turning and stopping. Unruly horses that do not learn how to do it safely do not have long careers and are quickly dispatched to the greener pastures.
+When humans are driving vehicles, they are responsible for their own safety, for their passengers, and others around, not to mention for the property damage. 
+
+In the simplest of rigs, you can give the driver, or a "skipper" a rudder, or a drawbar, and send them off on their way. 
+
+Once you put the horse in front of that vehicle, the horse takes the commands from the driver and does pulling, turning and stopping. Unruly horses that do not learn how to do it safely do not have long careers and are quickly dispatched to the greener pastures.
 
 Similarly, when you design an ADAS / AD system you take the responsibility for safety.
 
-You have to think which components of your system **control the vehicle**, or could **make the driver make a wrong decision** that could cause harm. 
+You have to think which of the components in your system **control the vehicle**, or could **make the driver make a wrong decision**, and result in causing harm. 
 
-Even systems that do not control the vehicle such as electronic mirrors, or surround view can cause harm. Once, I was driving a prototype vehicle that had a perfect camera system except it had a couple seconds of latency. It is enough to say, I realized it, once I drove off the curb which, on the screen, was a couple of feet further. No harm was done. 
+Even systems which do not control the vehicle such as electronic mirrors, or surround view can cause harm. Once, I was driving a prototype vehicle that had a perfect camera system except it had a couple seconds of latency. Enough to say, I realized it, once I drove off the curb which, on the screen, was a couple of feet further. No harm was done, but dangerous.
 
-Another example could be an augmented reality (AR) system that projects on the driver's windshield. Typically, AR does not require safety rating. Let's imagine the AR system runs on the in-vehicle infotainment (IVI) operating system that has the unrelated feature which displays something (e.g. fireworks or disco ball) on the rare occasions (e.g. user's birthday) and it slipped the attention of the quality assurance (QA). It is a far-fetched example, but it drives the need for safety mindset. 
+Another example could be an augmented reality (AR) system that projects on the driver's windshield. Typically, AR does not require safety rating. Let's imagine the AR system runs on the in-vehicle infotainment (IVI) operating system that has the unrelated feature (or a bug) which displays something (e.g. fireworks or disco ball) on the rare occasions (e.g. user's birthday) and it slipped the attention of the quality assurance (QA). It is a far-fetched example, but it shows the need for safety mindset. 
 
 If you are **controlling the vehicle, or potentially distracting the driver** your system has to be evaluated from the safety perspective.
 
@@ -246,7 +250,9 @@ The "safety island" usually has a separate power management, as safety-certified
 
 
 
+### SOTIF
 
+- requirements for training set
 
 
 
